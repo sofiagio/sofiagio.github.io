@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sofia Gio</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.png" />
+    <link rel="stylesheet" href="css/galeria.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
+
+    <script type="module">
+      import PhotoSwipeLightbox from 'photoswipe/lightbox';
+      import 'photoswipe/style.css';
+
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#my-gallery',
+        children: 'a',
+        pswpModule: () => import('photoswipe')
+      });
+      lightbox.init();
+    </script>
+
+    <script>src="js/galeria.js"</script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BQ4TZGW0LX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-BQ4TZGW0LX");
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Conteúdo Artístico</h1>
+      <h2>Artistic Content</h2>
+    </header>
+    <main>
+      <div>
+        <p>
+          Fiz esse site como uma forma de presente para os meus fãs,
+          inteiramente gratuito, considere fazer uma doação no meu
+          <a href="https://www.patreon.com/sofiagio/">Patreon</a>.
+        </p>
+        <p>
+          I made this site as a gift to my fans, completely for free, please
+          consider donating to my
+          <a href="https://www.patreon.com/sofiagio/">Patreon</a>.
+        </p>
+      </div>
+      <div class="image-gallery"></div>
+    </main>
+    <footer>
+      <p>Criado com 💙 por Sofia Gio | Created with 💙 by Sofia Gio</p>
+    </footer>
+  </body>
+</html>
