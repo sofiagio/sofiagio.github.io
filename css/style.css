@@ -35,8 +35,8 @@ main {
 img {
   margin: 5px;
   width: 200px;
-  height: 200px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   transition: 0.3s;
 }
 
