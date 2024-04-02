@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const galeria = document.querySelector('.galeria');
-    const urlJson = 'https://raw.githubusercontent.com/sofiagio/sofiagio.github.io/github.com/sofiagio/sofiagio.github.io/json/galeria.json'; // Substitua pela URL correta do seu arquivo JSON
+    const urlJson = 'https://raw.githubusercontent.com/sofiagio/sofiagio.github.io/github.com/sofiagio/sofiagio.github.io/json/galeria.json';
     
     console.log("teste de js")
     fetch(urlJson)
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(data => {
         data.imagens.forEach(imagem => {
           const img = document.createElement('img');
-          img.src = `https://raw.githubusercontent.com/sofiagio/sofiagio.github.io/github.com/sofiagio/sofiagio.github.io/img/galeria/${imagem}`; // Substitua pela URL correta
+          img.src = `https://raw.githubusercontent.com/sofiagio/sofiagio.github.io/github.com/sofiagio/sofiagio.github.io/img/galeria/${imagem}`;
           img.alt = imagem;
           galeria.appendChild(img);
         });
