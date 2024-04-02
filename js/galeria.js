@@ -2,7 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const galeria = document.querySelector('.galeria');
     const urlJson = 'https://raw.githubusercontent.com/sofiagio/sofiagio.github.io/github.com/sofiagio/sofiagio.github.io/json/galeria.json'; // Substitua pela URL correta do seu arquivo JSON
-  
+    
+    console.log("teste de js")
     fetch(urlJson)
       .then(response => response.json())
       .then(data => {
