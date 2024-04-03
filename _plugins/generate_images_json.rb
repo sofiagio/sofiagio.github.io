@@ -10,5 +10,5 @@ Jekyll::Hooks.register :site, :post_write do |site|
     # Gera o JSON
     File.write(File.join(site.dest, 'json/galeria.json'), { imagens: images }.to_json)
 
-    puts site.dest
+    puts 'site.dest'
   end
