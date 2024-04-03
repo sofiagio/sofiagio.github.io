@@ -1,0 +1,31 @@
+name: Generate JSON for Gallery
+
+on:
+  push:
+    paths:
+      - 'img/galeria/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+
+      - name: Generate JSON file
+        run: |
+          mkdir -p json
+          node -e "const fs = require('fs'); const images = fs.readdirSync('img/galeria').filter(file => file.endsWith('.jpg') || file.endsWith('.png')); fs.writeFileSync('json/galeria.json', JSON.stringify({ imagens: images }));"
+
+      - name: Commit and push if there are changes
+        run: |
+          git config --global user.email 'actions@github.com'
+          git config --global user.name 'GitHub Actions'
+          git add json/galeria.json
+          git commit -m 'Update galeria.json' || exit 0
+          git push
